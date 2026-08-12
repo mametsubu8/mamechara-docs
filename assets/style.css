@@ -4,22 +4,23 @@
 :root {
   color-scheme: light dark;
 
-  --ink:        oklch(24% 0.02 300);
-  --ink-soft:   oklch(46% 0.02 300);
-  --ink-faint:  oklch(62% 0.015 300);
-  --paper:      oklch(98.5% 0.004 300);
-  --paper-2:    oklch(96% 0.008 300);
-  --line:       oklch(89% 0.008 300);
-  --line-soft:  oklch(93% 0.006 300);
+  --ink:        oklch(27% 0.030 55);
+  --ink-soft:   oklch(47% 0.032 58);
+  --ink-faint:  oklch(63% 0.028 62);
+  --paper:      oklch(98% 0.008 78);
+  --paper-2:    oklch(95.5% 0.018 76);
+  --line:       oklch(88% 0.020 72);
+  --line-soft:  oklch(92.5% 0.015 74);
 
-  --accent:     oklch(52% 0.19 300);
-  --accent-2:   oklch(62% 0.16 300);
-  --accent-wash: oklch(96% 0.03 300);
+  --accent:     oklch(53% 0.130 52);
+  --accent-2:   oklch(64% 0.145 58);
+  --accent-wash: oklch(95% 0.040 72);
 
-  --warn:       oklch(52% 0.14 60);
-  --warn-wash:  oklch(96.5% 0.035 75);
+  /* 注意書きはアクセントと混ざらないよう赤茶寄りに置く */
+  --warn:       oklch(49% 0.150 33);
+  --warn-wash:  oklch(96% 0.038 40);
 
-  --shot-mat:   oklch(93% 0.008 300);
+  --shot-mat:   oklch(93% 0.016 74);
 
   --text-base:  1.0625rem;
   --measure:    41rem;
@@ -35,22 +36,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink:        oklch(92% 0.012 300);
-    --ink-soft:   oklch(74% 0.015 300);
-    --ink-faint:  oklch(58% 0.015 300);
-    --paper:      oklch(19% 0.014 300);
-    --paper-2:    oklch(23% 0.018 300);
-    --line:       oklch(32% 0.018 300);
-    --line-soft:  oklch(27% 0.016 300);
+    --ink:        oklch(93% 0.016 78);
+    --ink-soft:   oklch(76% 0.022 72);
+    --ink-faint:  oklch(59% 0.022 66);
+    --paper:      oklch(20% 0.018 52);
+    --paper-2:    oklch(24% 0.024 56);
+    --line:       oklch(34% 0.026 60);
+    --line-soft:  oklch(28% 0.021 57);
 
-    --accent:     oklch(80% 0.13 300);
-    --accent-2:   oklch(72% 0.14 300);
-    --accent-wash: oklch(27% 0.04 300);
+    --accent:     oklch(81% 0.115 70);
+    --accent-2:   oklch(73% 0.130 62);
+    --accent-wash: oklch(28% 0.045 58);
 
-    --warn:       oklch(84% 0.11 75);
-    --warn-wash:  oklch(28% 0.035 70);
+    --warn:       oklch(83% 0.105 45);
+    --warn-wash:  oklch(29% 0.042 38);
 
-    --shot-mat:   oklch(26% 0.014 300);
+    --shot-mat:   oklch(27% 0.020 57);
   }
 }
 
@@ -157,9 +158,9 @@ h1 {
 .lede {
   font-family: var(--display);
   max-width: var(--measure);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 1.85;
   color: var(--ink-soft);
   margin: 0 0 3rem;
 }
