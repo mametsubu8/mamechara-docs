@@ -296,6 +296,13 @@ figcaption {
   .split > figure { max-width: var(--shot); }
 }
 
+/* 短いブロックは balance の方が文節で揃う。
+   pretty だと行を詰めきろうとして「部分は上/書きされません」のように
+   語の途中で切れることがある（実測して確かめた） */
+.note p, .callout p, figcaption, .path p, .faq summary, .next .why, dl.terms dd {
+  text-wrap: balance;
+}
+
 /* ── 注記 ── */
 
 .note, .callout {
