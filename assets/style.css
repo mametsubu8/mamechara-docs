@@ -267,12 +267,12 @@ figcaption {
 }
 
 /* 画像と文章を並べる。狭い画面では縦に落ちる。
-   文章より画像がずっと背が高くなるので、短い側は中央に置く */
+   短い側を中央に置くと見出しが図の中ほどまで下がってしまうので、上端で揃える */
 .split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
   max-width: 68rem;
 }
 
