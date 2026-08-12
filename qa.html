@@ -169,14 +169,12 @@
 <summary>ウィンドウの背景を透明にしたい</summary>
 <div class="body">
   <p>
-    <strong>できません。</strong>Unity の <code>EditorWindow</code> は <code>OnGUI</code> が走る前に
-    Unity 自身が背景を塗ってしまい、パッケージ側から止める方法がありません。
-    ドッキングされたウィンドウの後ろには、透けて見えるものもありません。
+    <strong>Unity の現在の仕様上、ウィンドウ自体は透明にできません。</strong>
   </p>
   <p>
-    背景なしでキャラを見せたいときは <strong>どのウィンドウに出す</strong> を使ってください。
-    Scene や Hierarchy の<strong>上に直接キャラだけを描く</strong>方法で、背景は一切塗りません。
-    これが用意されているのはそのためです。
+    透過でウィンドウに置きたいときは <strong>どのウィンドウに出す</strong> を使ってください。
+    Scene / Hierarchy / Inspector / Project / Console / Game の上に
+    <strong>キャラだけを直接描く</strong>方法で、背景は一切塗りません。
   </p>
 </div>
 </details>

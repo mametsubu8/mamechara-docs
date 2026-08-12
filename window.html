@@ -103,16 +103,10 @@
 <h2>ウィンドウの背景は透明にできません</h2>
 
 <p>
-  Unity の <code>EditorWindow</code> は透明にできません。<code>OnGUI</code> が走る前に Unity 自身が
-  ウィンドウの背景を塗ってしまい、パッケージ側からそれを止める方法がないためです。
-  ドッキングされたウィンドウの後ろには、そもそも透けて見えるものもありません。
-</p>
-
-<p>
-  そのために <strong>「どのウィンドウに出す」（ウィンドウに浮かせる）</strong>があります。
-  ウィンドウをくり抜くのではなく、<strong>すでに開いているウィンドウの上にキャラだけを描く</strong>
-  という方法です。Scene / Hierarchy / Inspector / Project / Console / Game の上に
-  背景を一切塗らずに描くので、キャラだけがそこに浮いて見えます。
+  Unity の現在の仕様上、<strong>ウィンドウ自体は透明にできません</strong>。
+  透過でウィンドウに置きたいときは、<strong>どのウィンドウに出す</strong>で
+  Scene / Hierarchy / Inspector / Project / Console / Game の上にそれぞれ表示してください。
+  こちらは背景を一切塗らないので、キャラだけがそこに浮いて見えます。
 </p>
 
 <p>
