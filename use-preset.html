@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プリセットを使う — MameChara</title>
+<meta name="description" content="配られた .mamechara ファイルを読み込んで、立ち位置と大きさを整えるまでの手順。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Mame<span>Chara</span></a>
+    <nav>
+      <a href="index.html">はじめに</a>
+      <a href="use-preset.html" aria-current="page">プリセットを使う</a>
+      <a href="own-images.html">自分の絵で作る</a>
+      <a href="distribute.html">プリセットを配る</a>
+      <a href="reference.html">設定リファレンス</a>
+      <a href="troubleshooting.html">困ったとき</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<h1>プリセットを使う</h1>
+
+<p class="lede">
+配られた <code>.mamechara</code> ファイルには、キャラの画像・アニメ・立ち位置が一式入っています。
+作者が同梱していれば吹き出しと背景も一緒に来ます。読み込んで、自分のエディタでの置き場所を
+決めれば終わりです。ここは<strong>簡単設定</strong>だけで完結します。
+</p>
+
+<ol class="steps">
+
+<li>
+<h3>設定ウィンドウを開く</h3>
+<p>
+  メニューの <code>MAMEMONO &gt; MameChara &gt; Settings</code>。
+  初めて開いたときは <strong>簡単設定</strong> が選ばれています。
+</p>
+<p>
+  上の <strong>1 2 3 4</strong> がスロットです。4体まで別々のキャラを持てるので、
+  空いているスロットを選んでください。番号の横に「●」が付いているスロットには、すでに中身が入っています。
+</p>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>プリセットを適用する</h3>
+    <p>
+      <strong>キャラ</strong> の <strong>プリセットを適用...</strong> を押します。
+      配られた <code>.mamechara</code> ファイルを選ぶか、このプロジェクトに保存済みのプリセットを選びます。
+    </p>
+    <p>
+      画像・アニメ・吹き出しが一式そろった状態でスロットに入ります。
+      プレビューにキャラが出れば読み込めています。
+    </p>
+    <div class="note">
+      <span class="label">上書きされる範囲</span>
+      <p>
+        プリセットには<strong>「何を含むか」</strong>が記録されています。キャラは必ず入っていますが、
+        吹き出しと背景は作者が選んだ場合だけ入っています。
+        <strong>含まれていない部分は上書きされません</strong>——
+        キャラだけのプリセットを適用しても、自分で設定した吹き出しや背景はそのまま残ります。
+      </p>
+    </div>
+  </div>
+  <figure>
+    <img src="images/simple-clean.png" alt="簡単設定のキャラのセクション。プリセットを適用ボタンがある">
+    <figcaption>簡単設定の一番上。ここから読み込みます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>立ち位置と大きさを決める</h3>
+    <p>
+      <strong>位置と大きさ</strong> のスライダーで、水平位置・垂直位置・スケール・不透明度を合わせます。
+    </p>
+    <p>
+      位置は 0〜1 がウィンドウの内側です。範囲の外に出せば、キャラが画面の端から
+      半分だけのぞく置き方もできます。
+    </p>
+    <div class="callout">
+      <span class="label">これは「初期位置」です</span>
+      <p>
+        ここで決めるのは<strong>まだ動かしていないウィンドウでの位置</strong>です。
+        キャラは<strong>ウィンドウ上で直接ドラッグして動かせます</strong>。そしてドラッグで動かすと、
+        <strong>そのウィンドウの位置だけがここより優先されます</strong>。
+      </p>
+      <p>
+        つまり Hierarchy でキャラを動かしたあとにこのスライダーを触っても、Hierarchy のキャラは動きません。
+        戻したいときは <strong>ウィンドウごとの位置をリセット</strong> を押してください。
+      </p>
+    </div>
+    <p>
+      この仕組みのおかげで、同じスロットのキャラを「Scene ビューでは左上、Hierarchy では下端から
+      はみ出させる」といった具合に、ウィンドウごとに別の置き方ができます。
+    </p>
+  </div>
+  <figure>
+    <img src="images/simple-01.png" alt="位置と大きさのスライダー。下にウィンドウごとの位置をリセットのボタンがある">
+    <figcaption>ドラッグで動かした位置が残っているときは、スライダーの下にその案内とリセットが出ます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>吹き出しとクリック範囲の位置を合わせる</h3>
+    <p>
+      吹き出しの<strong>中身</strong>（画像やセリフ）はプリセットが持っていますが、
+      <strong>どこに出るか</strong>はキャラの立ち位置に対する相対位置なので、こちらで調整します。
+      キャラを動かせば吹き出しも一緒に付いてきます。
+    </p>
+    <p>
+      <strong>クリック遮断範囲</strong>は、キャラの周りでクリックを受け止める四角です。
+      これがないと、キャラを押したつもりのクリックが下の Hierarchy や Project に通ってしまいます。
+      逆に広すぎると、キャラの近くにある本来のUIが押せなくなります。
+    </p>
+    <p>
+      範囲を決めるときは、<a href="reference.html#clicks">クリック</a>タブで赤枠の表示を入れると見ながら合わせられます。
+    </p>
+  </div>
+  <figure>
+    <img src="images/simple-02.png" alt="吹き出しとクリック範囲のセクション、その下にどのウィンドウに出すの一覧">
+    <figcaption>簡単設定を下までスクロールすると、吹き出しとクリック範囲、そして表示先の一覧があります。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<h3>どのウィンドウに出すかを選ぶ</h3>
+<p>
+  <strong>どのウィンドウに出す</strong> で、ウィンドウごとにどのスロットを出すかを決めます。
+  <strong>表示しない</strong> を選べばそのウィンドウには出ません。
+</p>
+<table>
+  <tr><th>浮かせられるウィンドウ</th><th></th></tr>
+  <tr><td>Scene</td><td>シーンビューの上</td></tr>
+  <tr><td>Hierarchy</td><td>階層ウィンドウの上</td></tr>
+  <tr><td>Inspector</td><td>インスペクタの上</td></tr>
+  <tr><td>Project</td><td>プロジェクトウィンドウの上</td></tr>
+  <tr><td>Console</td><td>コンソールの上</td></tr>
+  <tr><td>Game</td><td>ゲームビューの上</td></tr>
+</table>
+<p>
+  これらの上に描くときは<strong>背景を一切塗らない</strong>ので、キャラだけがそこに浮いて見えます。
+  各行の <strong>↺</strong> は、そのウィンドウでドラッグして動かした位置だけを消すボタンです。
+</p>
+<p>
+  キャラに専用の場所を与えたい場合は <code>MAMEMONO &gt; MameChara &gt; MameChara</code> で
+  独立したウィンドウが開きます。こちらはドッキングでき、背景に色や画像を敷けます。
+</p>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>クリックしてみる</h3>
+    <p>
+      キャラをクリックすると<strong>吹き出しが開き</strong>、その中に<strong>ミニシェルフ</strong>が並びます。
+      もう一度クリックすると閉じます。
+    </p>
+    <p>
+      ミニシェルフは<strong>アセットの一時置き場</strong>です。4枠あり、
+      アセットをドラッグして置くとキャラが覚えてくれます。そこから Scene へドラッグして戻すこともできますし、
+      <strong>わすれる</strong>で消せます。
+    </p>
+    <p>
+      吹き出しに入るセリフは、<strong>なぜ出たか</strong>で変わります。
+      クリックしたとき、シーンを保存したとき、コンパイルが終わったとき、Play を始めたとき、
+      そして何もしていないときの独り言。作者がそれぞれに書いていれば、場面に合ったことを言います。
+    </p>
+  </div>
+  <figure>
+    <img src="images/in-action.png" alt="プレビューでキャラをクリックし、吹き出しの中にミニシェルフが並んでいる">
+    <figcaption>クリックで開いた吹き出しとミニシェルフ。設定ウィンドウのプレビューでも同じ動きが確認できます。</figcaption>
+  </figure>
+</div>
+</li>
+
+</ol>
+
+<h2>ここまでで終わりです</h2>
+
+<p>
+  プリセットが大きな入れ物なので、たいていは置き場所を決めた時点で完成します。
+  さらに手を入れたくなったら、次のどちらかへ。
+</p>
+
+<div class="next">
+  <span class="label">次に読む</span>
+  <ul>
+    <li><a href="own-images.html">自分の絵で作る</a> <span class="why">— 画像を差し替える、セリフを書き換える</span></li>
+    <li><a href="reference.html">設定リファレンス</a> <span class="why">— 触った項目の意味を確かめる</span></li>
+    <li><a href="troubleshooting.html">困ったとき</a> <span class="why">— 出てこない、押せない、動かない</span></li>
+  </ul>
+</div>
+
+</main>
+
+<footer><div class="inner">MameChara — MAMEMONO</div></footer>
+
+</body>
+</html>

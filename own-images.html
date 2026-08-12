@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自分の絵で作る — MameChara</title>
+<meta name="description" content="手持ちのイラストから MameChara のキャラを組み立てる手順。アニメ、吹き出し、セリフ、ミニシェルフ、クリック範囲、背景。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Mame<span>Chara</span></a>
+    <nav>
+      <a href="index.html">はじめに</a>
+      <a href="use-preset.html">プリセットを使う</a>
+      <a href="own-images.html" aria-current="page">自分の絵で作る</a>
+      <a href="distribute.html">プリセットを配る</a>
+      <a href="reference.html">設定リファレンス</a>
+      <a href="troubleshooting.html">困ったとき</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<h1>自分の絵で作る</h1>
+
+<p class="lede">
+プリセットを使わず、手持ちのイラストからキャラを組み立てます。ここからは
+<strong>詳細設定</strong>の話です。上の切り替えで<strong>詳細設定</strong>を選ぶと、
+7つのタブが出てきます。最初の6つは<strong>選んでいるスロットに対する設定</strong>で、
+<strong>全体</strong>だけが MameChara 全体に効きます。
+</p>
+
+<div class="note">
+  <span class="label">画像について</span>
+  <p>
+    <strong>透過 PNG</strong> を用意してください。大きさは自由です——読み込んだあとスケールで合わせられます。
+    選んだ画像は <code>ProjectSettings/MameChara/</code> にコピーされるので、
+    元ファイルを移動したり消したりしてもキャラは消えません。
+  </p>
+</div>
+
+<ol class="steps">
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>キャラ画像を入れる</h3>
+    <p>
+      <strong>キャラ</strong>タブの <strong>キャラ画像</strong> で <strong>画像を変更...</strong> を押して
+      1枚目を選びます。これだけでキャラが立ちます。
+    </p>
+    <p>
+      <strong>2枚目（アニメ）</strong>も設定すると、2枚が交互に切り替わる<strong>アニメーション</strong>になります。
+      まばたき、しっぽの動き、呼吸——2枚で表現できるものなら何でも。
+    </p>
+    <p>
+      同じタブの <strong>他のスロットからコピー...</strong> は、別のスロットの設定と画像をまるごと複製します。
+      画像も複製されるので、あとからどちらを変えても影響しません。色違いを作るときに便利です。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-character-01.png" alt="キャラタブ。プリセット、他のスロットからコピー、キャラ画像の1枚目と2枚目、アニメーション">
+    <figcaption>キャラタブの上半分。1枚目と2枚目、その下がアニメーションの設定です。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>アニメとクリック差分を決める</h3>
+    <p>
+      <strong>アニメーション</strong>では切り替わり方を決めます。
+    </p>
+    <table>
+      <tr><td>切替速度（秒）</td><td>1枚あたりの表示時間</td></tr>
+      <tr><td>フェード</td><td>入れるとクロスフェード、切ればパッと切り替わる</td></tr>
+      <tr><td>2枚目の位置を変更</td><td>2枚目だけ位置をずらす。跳ねる動きが作れます</td></tr>
+    </table>
+    <p>
+      <strong>クリック差分</strong>は、吹き出しを開いているあいだに表示する画像です。
+      設定するとアニメが止まり、この1枚に切り替わります。話しているときの表情を別に描いておく用途です。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-character-02.png" alt="キャラタブの下半分。アニメーションの各項目とクリック差分">
+    <figcaption>アニメーションとクリック差分。切替速度・フェード・2枚目のオフセット。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>立ち位置と大きさを決める</h3>
+    <p>
+      <strong>配置</strong>タブで大きさ・不透明度・立ち位置を決めます。
+      スライダーのほかに<strong>ピクセル単位の微調整</strong>もあるので、端にぴったり寄せたいときはこちら。
+    </p>
+    <div class="callout">
+      <span class="label">ここは「初期位置」です</span>
+      <p>
+        キャラは<strong>ウィンドウ上で直接ドラッグして動かせます</strong>。動かすと、
+        <strong>そのウィンドウの位置だけがここより優先されます</strong>。
+        タブの下に<strong>ウィンドウごとの位置</strong>の一覧が出るので、
+        どのウィンドウに上書きが残っているかはそこで分かります。行ごとに個別に消せます。
+      </p>
+    </div>
+    <p>
+      <strong>手前に描く</strong>を入れると、ウィンドウのUIより前に出ます。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-placement-01.png" alt="配置タブ。初期位置のスライダーとピクセル微調整、ウィンドウごとの位置の一覧">
+    <figcaption>配置タブ。初期位置であることと、ドラッグの上書きについての案内が出ます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>吹き出しを用意する</h3>
+    <p>
+      <strong>吹き出し</strong>タブ。キャラをクリックしたときに開くものです。
+      <strong>画像でもテキストでも、両方でも</strong>作れます。
+    </p>
+    <p>
+      <strong>吹き出し画像</strong>には<strong>既定の吹き出しが同梱されている</strong>ので、
+      <strong>同梱の画像から選ぶ...</strong>を押せば自分で描かなくても始められます。
+    </p>
+    <p>
+      画像を入れない場合は、<strong>テキストの実サイズに合わせた簡易ボックス</strong>が描かれます。
+      セリフだけ書けば吹き出しとして成立します。
+    </p>
+    <p>
+      位置はキャラの矩形を基準にした相対値です（0〜1 がキャラの内側、外にも置けます）。
+      文字サイズ・文字色・余白もここで。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-bubble-01.png" alt="吹き出しタブ。吹き出し画像、スケール、位置の設定">
+    <figcaption>吹き出しタブの上半分。同梱の画像から選べます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>きっかけごとにセリフを書く</h3>
+    <p>
+      セリフは<strong>1行にひとつ</strong>書きます。複数行あればその中から選ばれます。
+      そして<strong>きっかけごとに別のリスト</strong>を持っています。
+    </p>
+    <table>
+      <tr><td>クリック</td><td>キャラをクリックしたとき</td></tr>
+      <tr><td>独り言</td><td>放っておくと一定間隔で。出す間隔を 0 にすると黙ります</td></tr>
+      <tr><td>コンパイル完了時</td><td>スクリプトのコンパイルが終わったとき</td></tr>
+      <tr><td>Play開始時</td><td>再生を始めたとき</td></tr>
+      <tr><td>シーン保存時</td><td>シーンを保存したとき</td></tr>
+    </table>
+    <div class="note">
+      <span class="label">重なったときの優先度</span>
+      <p>
+        <strong>クリック → イベント → 独り言</strong>の順です。
+        クリックは最優先で<strong>割り込み</strong>ます。別のセリフが出ている最中にクリックしても
+        クリックのセリフに切り替わり、出ていた自動表示は打ち切られます。
+      </p>
+      <p>
+        逆に、クリックで吹き出しを開いているあいだは<strong>自動表示は始まりません</strong>。
+        ミニシェルフを触っているときに独り言で上書きされない、ということです。
+      </p>
+    </div>
+    <p>
+      <strong>出しておく時間</strong>は自動表示（イベントと独り言）に共通です。
+      <strong>順番をランダムにする</strong>を切ると、書いた順に出ます。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-bubble-02.png" alt="吹き出しタブの自動表示。独り言、コンパイル完了時、Play開始時、シーン保存時それぞれのセリフ欄">
+    <figcaption>きっかけごとに別のセリフ欄があります。チェックを外したイベントの欄は隠れます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>ミニシェルフの位置を合わせる</h3>
+    <p>
+      <strong>シェルフ</strong>タブ。吹き出しと一緒に出る4枠のアセット置き場です。
+      アイコンサイズと位置を、キャラの矩形を基準に決めます。
+    </p>
+    <p>
+      吹き出し画像の中にきれいに収まるよう合わせるのがコツです。
+      プレビューでキャラをクリックすれば、実際の重なりを見ながら調整できます。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-shelf.png" alt="シェルフタブ。アイコンサイズと水平・垂直位置">
+    <figcaption>シェルフタブ。プレビューでは吹き出しの中にシェルフが並んでいます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>クリック遮断範囲を決める</h3>
+    <p>
+      <strong>クリック</strong>タブ。キャラの周りでクリックを受け止める四角です。
+      ウィンドウの上に浮かせているとき、この範囲がないとキャラを押したクリックが
+      下の Hierarchy や Project に通ってしまいます。
+    </p>
+    <p>
+      <strong>範囲を赤枠で表示する</strong>を入れると、範囲が見えるので合わせやすくなります。
+      赤枠は<strong>この設定ウィンドウを開いているあいだだけ</strong>出るので、
+      決め終わったら切っておいても構いません。
+    </p>
+    <p>
+      広すぎると本来のUIが押せなくなるので、キャラの見た目より少し大きいくらいが目安です。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-block.png" alt="クリックタブ。クリック遮断範囲の設定と赤枠表示のトグル">
+    <figcaption>クリックタブ。赤枠は範囲を決めるときだけ出せます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>背景を敷く（専用ウィンドウ向け）</h3>
+    <p>
+      <strong>背景</strong>タブ。<strong>MameChara 専用ウィンドウ</strong>の背景に、色・画像
+      （タイル or 伸ばす）・その両方を敷けます。それぞれに不透明度があります。
+    </p>
+    <p>
+      これは専用ウィンドウの中の話です。他のウィンドウに浮かせているときは背景を塗らないので、
+      関係ありません。
+    </p>
+  </div>
+  <figure>
+    <img src="images/adv-background.png" alt="背景タブ。色と画像の設定">
+    <figcaption>背景タブ。専用ウィンドウに色や画像を敷きます。</figcaption>
+  </figure>
+</div>
+</li>
+
+<li>
+<div class="split">
+  <div class="prose">
+    <h3>全体の設定を確認する</h3>
+    <p>
+      <strong>全体</strong>タブはスロットに属さない設定です。
+    </p>
+    <table>
+      <tr><td>ウィンドウに浮かせる</td><td>どのウィンドウにどのスロットを出すか</td></tr>
+      <tr><td>MameChara を有効にする</td><td>切ると設定を残したまま全ウィンドウで表示を止めます</td></tr>
+      <tr><td>Play中は隠す</td><td>再生中はキャラを出しません</td></tr>
+      <tr><td>Unity が非アクティブのとき<br>アニメを止める</td><td>他のアプリを使っているあいだ再描画を止めます</td></tr>
+      <tr><td>Language / 言語</td><td>日本語 / English</td></tr>
+      <tr><td>設定の持ち出し</td><td>4スロット分をまとめて1ファイルに書き出し・読み込み</td></tr>
+    </table>
+  </div>
+  <figure>
+    <img src="images/adv-global.png" alt="全体タブ。ウィンドウごとの表示先、全体オプション、言語、設定の持ち出し">
+    <figcaption>全体タブ。ここだけスロットの選択が効きません。</figcaption>
+  </figure>
+</div>
+</li>
+
+</ol>
+
+<h2>作ったものを残す</h2>
+
+<p>
+  組み上がったら<strong>プリセットとして保存</strong>しておくと、名前を付けて呼び出せます。
+  別のプロジェクトや他の人に渡すなら <code>.mamechara</code> ファイルに書き出します。
+  やり方は <a href="distribute.html">プリセットを配る</a> へ。
+</p>
+
+<p>
+  自分の環境ごと移したいだけなら、<strong>全体</strong>タブの<strong>設定の持ち出し</strong>で
+  4スロット分をまとめて1ファイルにできます。
+</p>
+
+<div class="next">
+  <span class="label">次に読む</span>
+  <ul>
+    <li><a href="distribute.html">プリセットを配る</a> <span class="why">— 書き出して人に渡す</span></li>
+    <li><a href="reference.html">設定リファレンス</a> <span class="why">— 全項目を一覧で引く</span></li>
+    <li><a href="troubleshooting.html">困ったとき</a> <span class="why">— 思ったとおりに動かない</span></li>
+  </ul>
+</div>
+
+</main>
+
+<footer><div class="inner">MameChara — MAMEMONO</div></footer>
+
+</body>
+</html>

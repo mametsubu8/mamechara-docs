@@ -1,0 +1,41 @@
+# MameChara ドキュメント
+
+[MameChara](https://mametsubu8.github.io/mamechara-docs/) の使い方ドキュメント。GitHub Pages で公開しています。
+
+**https://mametsubu8.github.io/mamechara-docs/**
+
+## 構成
+
+素の HTML と CSS のみ。ビルドはありません。ファイルを編集して push すれば公開されます。
+
+| ファイル | 内容 |
+|---------|------|
+| `index.html` | 何ができるか、インストール、3つの入口 |
+| `use-preset.html` | 配られたプリセットを使う（使う人向け） |
+| `own-images.html` | 自分のイラストから組み立てる（作る人向け） |
+| `distribute.html` | `.mamechara` を書き出して配る（配る人向け） |
+| `reference.html` | 設定項目の一覧 |
+| `troubleshooting.html` | 症状別の対処 |
+| `assets/style.css` | 全ページ共通のスタイル。配色トークンで light / dark 両対応 |
+| `images/` | 設定ウィンドウのスクリーンショット |
+
+ヘッダーとフッターは各ページに直接書いています。ナビゲーションを変えるときは
+全ページの `<nav>` を揃えてください（現在のページには `aria-current="page"` を付ける）。
+
+## スクリーンショット
+
+設定ウィンドウだけを撮っています。プロジェクトの中身は写しません。
+
+ファイル名の規則:
+
+- `simple-*` — 簡単設定
+- `adv-<タブ名>-*` — 詳細設定の各タブ
+- `in-action` — クリックで吹き出しとミニシェルフが開いた状態
+- `*-clean` — ドラッグの上書きが無いスロット（初期位置の案内が出ている状態）
+
+撮り直すときは、ウィンドウ幅 560px・プレビューを「フィット」させた状態に揃えると
+既存の画像と並びが崩れません。
+
+## 本体
+
+MameChara 本体のリポジトリは別（非公開）です。配布は `.unitypackage` で行っています。

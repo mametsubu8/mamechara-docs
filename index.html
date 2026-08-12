@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MameChara ドキュメント</title>
+<meta name="description" content="Unity エディタにキャラを住まわせる MameChara の使い方。プリセットを使う人、自分のイラストで作る人、プリセットを配る人それぞれの手順。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Mame<span>Chara</span></a>
+    <nav>
+      <a href="index.html" aria-current="page">はじめに</a>
+      <a href="use-preset.html">プリセットを使う</a>
+      <a href="own-images.html">自分の絵で作る</a>
+      <a href="distribute.html">プリセットを配る</a>
+      <a href="reference.html">設定リファレンス</a>
+      <a href="troubleshooting.html">困ったとき</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<h1>Unity エディタに、キャラを住まわせる</h1>
+
+<p class="lede">
+MameChara は Unity のエディタにキャラを表示するエディタ拡張です。専用ウィンドウに置くこともできますし、
+Scene ビューや Hierarchy、Inspector、Project、Console、Game ウィンドウの上に直接浮かせることもできます。
+クリックすると吹き出しが開き、その中のミニシェルフにアセットを預けておけます。
+</p>
+
+<div class="split">
+  <div class="prose">
+    <h2 style="margin-top:0">まず、どれをしたいですか</h2>
+    <p>
+      MameChara の設定は、やることによって見る場所が違います。多くの人は
+      <strong>プリセットを読み込んで、立ち位置を整えるだけ</strong>で終わります。
+      自分の絵から組み立てたい人と、作ったものを配りたい人は、そのあとの話です。
+    </p>
+    <p>
+      下の3つは順番ではなく、<strong>入口</strong>です。自分に当てはまるものから読んでください。
+    </p>
+  </div>
+  <figure>
+    <img src="images/in-action.png" alt="MameChara の設定ウィンドウ。プレビューの中でキャラがクリックされ、吹き出しとミニシェルフが開いている">
+    <figcaption>設定ウィンドウのプレビューは実際の描画をそのまま映します。キャラをクリックすると吹き出しが開き、その中にミニシェルフが並びます。</figcaption>
+  </figure>
+</div>
+
+<div class="paths">
+  <a class="path" href="use-preset.html">
+    <span class="who">使う人</span>
+    <span class="title">プリセットを使う</span>
+    <p>配られた <code>.mamechara</code> を読み込んで、立ち位置と大きさを整える。ここまでで完成する人がほとんどです。</p>
+  </a>
+  <a class="path" href="own-images.html">
+    <span class="who">作る人</span>
+    <span class="title">自分の絵で作る</span>
+    <p>手持ちのイラストからキャラを組み立てる。アニメ、吹き出し、セリフ、ミニシェルフ、クリック範囲、背景。</p>
+  </a>
+  <a class="path" href="distribute.html">
+    <span class="who">配る人</span>
+    <span class="title">プリセットを配る</span>
+    <p>組み立てたものを1ファイルに書き出す。吹き出しや背景を同梱するかどうかを決めて渡す。</p>
+  </a>
+</div>
+
+<p>
+  各項目が何をする設定なのかを引きたいときは <a href="reference.html">設定リファレンス</a>、
+  思ったとおりに動かないときは <a href="troubleshooting.html">困ったとき</a> を見てください。
+</p>
+
+<h2>インストール</h2>
+
+<p>
+  手に入れた <code>MameChara-x.y.z.unitypackage</code> をダブルクリックするか、開いているプロジェクトに
+  ドラッグしてインポートします。<code>Assets/MameChara/</code> に入ります。
+</p>
+
+<table class="full">
+  <tr><td>必要な Unity</td><td>2022.3 以降</td></tr>
+  <tr><td>開き方</td><td>メニューの <code>MAMEMONO &gt; MameChara &gt; Settings</code></td></tr>
+  <tr><td>専用ウィンドウ</td><td><code>MAMEMONO &gt; MameChara &gt; MameChara</code></td></tr>
+</table>
+
+<div class="note">
+  <span class="label">ビルドには入りません</span>
+  <p>
+    中身はすべて <code>Editor/</code> 以下にあるので、ゲームのビルドには一切含まれません。
+    エディタ専用の拡張です。
+  </p>
+</div>
+
+<h3>更新するとき</h3>
+
+<p>
+  新しい <code>.unitypackage</code> を上からインポートするだけです。ファイルは同じ場所に置き換わります。
+</p>
+
+<p>
+  キャラの設定・画像・プリセットは <code>Assets/</code> ではなく
+  <strong><code>ProjectSettings/MameChara/</code></strong> にプロジェクトごとに保存されます。
+  インポータがここに触ることはないので、<strong>更新しても設定は消えません</strong>。
+</p>
+
+<h2>設定ウィンドウのつくり</h2>
+
+<div class="split">
+  <div class="prose">
+    <p>
+      設定ウィンドウの一番上に <strong>簡単設定</strong> と <strong>詳細設定</strong> の切り替えがあり、
+      その下に <strong>スロット</strong> の 1〜4 が並びます。
+    </p>
+    <p>
+      <strong>簡単設定</strong>は、プリセットを読み込んで置き場所を決めるまでの画面です。
+      項目は4つしかありません。
+    </p>
+    <table>
+      <tr><td>キャラ</td><td>プリセットを適用する</td></tr>
+      <tr><td>位置と大きさ</td><td>初期位置・スケール・不透明度</td></tr>
+      <tr><td>吹き出しとクリック範囲</td><td>キャラに対する吹き出しの位置と、クリックを止める範囲</td></tr>
+      <tr><td>どのウィンドウに出す</td><td>浮かせる先の選択と、ウィンドウごとの位置のリセット</td></tr>
+    </table>
+    <p>
+      <strong>詳細設定</strong>は7つのタブに分かれた全項目です。自分の絵から組み立てるとき、
+      配布用のプリセットを作るときはこちら。
+    </p>
+    <p>
+      <strong>スロットは4つ</strong>あり、それぞれ独立したキャラです。ウィンドウごとに
+      「Hierarchy にはスロット1、Scene にはスロット2」といった振り分けができます。
+    </p>
+  </div>
+  <figure>
+    <img src="images/simple-01.png" alt="簡単設定の画面。プレビューの下にキャラ、位置と大きさの各項目が並ぶ">
+    <figcaption>簡単設定。上から順に降りていけば置き場所が決まります。</figcaption>
+  </figure>
+</div>
+
+<h2>ウィンドウの背景は透明にできません</h2>
+
+<p>
+  Unity の <code>EditorWindow</code> は透明にできません。<code>OnGUI</code> が走る前に Unity 自身が
+  ウィンドウの背景を塗ってしまい、パッケージ側からそれを止める方法がないためです。
+  ドッキングされたウィンドウの後ろには、そもそも透けて見えるものもありません。
+</p>
+
+<p>
+  そのために <strong>「どのウィンドウに出す」（ウィンドウに浮かせる）</strong>があります。
+  ウィンドウをくり抜くのではなく、<strong>すでに開いているウィンドウの上にキャラだけを描く</strong>
+  という方法です。背景なしでキャラを見せたい場合はこちらを使ってください。
+</p>
+
+<div class="next">
+  <span class="label">次に読む</span>
+  <ul>
+    <li><a href="use-preset.html">プリセットを使う</a> <span class="why">— 配られたキャラを読み込んで置く</span></li>
+    <li><a href="own-images.html">自分の絵で作る</a> <span class="why">— 画像からキャラを組み立てる</span></li>
+    <li><a href="reference.html">設定リファレンス</a> <span class="why">— 項目の意味を引く</span></li>
+  </ul>
+</div>
+
+</main>
+
+<footer><div class="inner">MameChara — MAMEMONO</div></footer>
+
+</body>
+</html>
