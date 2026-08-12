@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>インストール — まめきゃら</title>
+<meta name="description" content="まめきゃら（MameChara）の導入手順と、更新しても設定が消えない理由。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238c5a2f'/%3E%3Cellipse cx='16' cy='13.5' rx='10' ry='7' fill='%23fff'/%3E%3Cpath d='M11.5 19l0.5 6 5.5-4.5z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">まめ<span>きゃら</span></a>
+    <nav>
+      <a href="index.html">はじめに</a>
+      <a href="install.html" aria-current="page">インストール</a>
+      <a href="window.html">ウィンドウのつくり</a>
+      <a href="use-preset.html">プリセットを使う</a>
+      <a href="own-images.html">自分の絵で作る</a>
+      <a href="distribute.html">クリエイター向け</a>
+      <a href="qa.html">Q&amp;A</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<h1>インストール</h1>
+
+<p class="lede">
+手に入れた <code>.unitypackage</code> をインポートするだけです。
+設定と画像は <code>Assets</code> の外に保存されるので、更新しても消えません。
+</p>
+
+<p>
+  <code>MameChara-x.y.z.unitypackage</code> をダブルクリックするか、開いているプロジェクトに
+  ドラッグしてインポートします。<code>Assets/MameChara/</code> に入ります。
+</p>
+
+<table class="full">
+  <tr><td>必要な Unity</td><td>2022.3 以降</td></tr>
+  <tr><td>開き方</td><td>メニューの <code>MAMEMONO &gt; MameChara &gt; Settings</code></td></tr>
+  <tr><td>専用ウィンドウ</td><td><code>MAMEMONO &gt; MameChara &gt; MameChara</code></td></tr>
+</table>
+
+<div class="note">
+  <span class="label">ビルドには入りません</span>
+  <p>
+    中身はすべて <code>Editor/</code> 以下にあるので、ゲームのビルドには一切含まれません。
+    エディタ専用の拡張です。
+  </p>
+</div>
+
+<h2>更新するとき</h2>
+
+<p>
+  新しい <code>.unitypackage</code> を上からインポートするだけです。ファイルは同じ場所に置き換わります。
+</p>
+
+<p>
+  キャラの設定・画像・プリセットは <code>Assets/</code> ではなく
+  <strong><code>ProjectSettings/MameChara/</code></strong> にプロジェクトごとに保存されます。
+  インポータがここに触ることはないので、<strong>更新しても設定は消えません</strong>。
+</p>
+
+<h2>別のプロジェクトや別のマシンへ</h2>
+
+<p>
+  設定はプロジェクトごとなので、そのままでは移りません。
+  <strong>詳細設定</strong>の<strong>全体</strong>タブにある<strong>設定の持ち出し</strong>で、
+  4スロット分の設定・画像・表示先・全体オプションを1ファイルに書き出せます。
+</p>
+
+<div class="next">
+  <span class="label">次に読む</span>
+  <ul>
+    <li><a href="window.html">ウィンドウのつくり</a> <span class="why">— どこに何の設定があるか</span></li>
+    <li><a href="use-preset.html">プリセットを使う</a> <span class="why">— キャラを読み込んで置く</span></li>
+  </ul>
+</div>
+
+</main>
+
+<footer><div class="inner">まめきゃら — MAMEMONO</div></footer>
+
+</body>
+</html>

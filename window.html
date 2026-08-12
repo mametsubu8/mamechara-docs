@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ウィンドウのつくり — まめきゃら</title>
+<meta name="description" content="設定ウィンドウの構造。簡単設定と詳細設定、4つのスロット、プレビュー、そして背景が透明にできない理由。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238c5a2f'/%3E%3Cellipse cx='16' cy='13.5' rx='10' ry='7' fill='%23fff'/%3E%3Cpath d='M11.5 19l0.5 6 5.5-4.5z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">まめ<span>きゃら</span></a>
+    <nav>
+      <a href="index.html">はじめに</a>
+      <a href="install.html">インストール</a>
+      <a href="window.html" aria-current="page">ウィンドウのつくり</a>
+      <a href="use-preset.html">プリセットを使う</a>
+      <a href="own-images.html">自分の絵で作る</a>
+      <a href="distribute.html">クリエイター向け</a>
+      <a href="qa.html">Q&amp;A</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<h1>ウィンドウのつくり</h1>
+
+<p class="lede">
+設定ウィンドウは上から、<strong>簡単設定／詳細設定</strong>の切り替え、
+<strong>スロット 1〜4</strong>、<strong>プレビュー</strong>、そして中身という並びです。
+</p>
+
+<div class="split">
+  <div class="prose">
+    <h2 style="margin-top:0">簡単設定</h2>
+    <p>
+      プリセットを読み込んで置き場所を決めるまでの画面です。項目は4つしかありません。
+    </p>
+    <table>
+      <tr><td>キャラ</td><td>プリセットを適用する</td></tr>
+      <tr><td>位置と大きさ</td><td>初期位置・スケール・不透明度</td></tr>
+      <tr><td>吹き出しとクリック範囲</td><td>キャラに対する吹き出しの位置と、クリックを止める範囲</td></tr>
+      <tr><td>どのウィンドウに出す</td><td>浮かせる先の選択と、ウィンドウごとの位置のリセット</td></tr>
+    </table>
+    <p>
+      プリセットが<strong>何を含むか</strong>は作者が決めますが、
+      <strong>どこに立つか</strong>は使う人のエディタの話なので、この画面に置いてあります。
+    </p>
+  </div>
+  <figure>
+    <a href="images/simple-01.png" title="原寸で開く"><img src="images/simple-01.png" alt="簡単設定の画面。プレビューの下にキャラ、位置と大きさの各項目が並ぶ"></a>
+    <figcaption>簡単設定。上から順に降りていけば置き場所が決まります。</figcaption>
+  </figure>
+</div>
+
+<h2>詳細設定</h2>
+
+<p>
+  7つのタブに分かれた全項目です。自分の絵から組み立てるとき、配布用のプリセットを作るときはこちら。
+</p>
+
+<table class="full">
+  <tr><td>キャラ</td><td>プリセット、他のスロットからコピー、画像、アニメ、クリック差分</td></tr>
+  <tr><td>配置</td><td>大きさ、初期位置、ピクセル微調整、手前に描く、ウィンドウごとの位置</td></tr>
+  <tr><td>吹き出し</td><td>吹き出し画像、テキスト、きっかけごとのセリフ、自動表示</td></tr>
+  <tr><td>シェルフ</td><td>ミニシェルフの大きさと位置</td></tr>
+  <tr><td>クリック</td><td>クリック遮断範囲と、赤枠の表示</td></tr>
+  <tr><td>背景</td><td>専用ウィンドウの背景（色・画像）</td></tr>
+  <tr><td>全体</td><td>どのウィンドウに出すか、全体オプション、言語、設定の持ち出し</td></tr>
+</table>
+
+<p>
+  はじめの6つは<strong>選んでいるスロットに対する設定</strong>です。
+  <strong>全体</strong>だけが MameChara 全体に効くので、このタブにはスロットの選択がありません。
+</p>
+
+<p>
+  最後に見ていたタブとモードは記憶されます。プリセットを作っている間は詳細設定のまま開きます。
+</p>
+
+<h2>スロットとプレビュー</h2>
+
+<table class="full">
+  <tr><td>スロット</td><td>
+    独立したキャラが<strong>4体</strong>。ウィンドウごとに「Hierarchy にはスロット1、
+    Scene にはスロット2」と振り分けられます。番号の横の「●」は中身が入っている印
+  </td></tr>
+  <tr><td>プレビュー</td><td>
+    実際の描画をそのまま映します。<strong>クリックで吹き出し</strong>、ホイールでズーム、
+    中ボタンドラッグで移動、<strong>フィット</strong>で収め直し。
+    ここではドラッグでキャラを動かせません（設定を映すものが設定を書き換えないため）
+  </td></tr>
+  <tr><td>各セクションの ↺</td><td>そのセクションだけを既定値に戻します</td></tr>
+</table>
+
+<h2>ウィンドウの背景は透明にできません</h2>
+
+<p>
+  Unity の <code>EditorWindow</code> は透明にできません。<code>OnGUI</code> が走る前に Unity 自身が
+  ウィンドウの背景を塗ってしまい、パッケージ側からそれを止める方法がないためです。
+  ドッキングされたウィンドウの後ろには、そもそも透けて見えるものもありません。
+</p>
+
+<p>
+  そのために <strong>「どのウィンドウに出す」（ウィンドウに浮かせる）</strong>があります。
+  ウィンドウをくり抜くのではなく、<strong>すでに開いているウィンドウの上にキャラだけを描く</strong>
+  という方法です。Scene / Hierarchy / Inspector / Project / Console / Game の上に
+  背景を一切塗らずに描くので、キャラだけがそこに浮いて見えます。
+</p>
+
+<p>
+  キャラに専用の場所を与えたいときは <code>MAMEMONO &gt; MameChara &gt; MameChara</code> で
+  独立したウィンドウが開きます。こちらはドッキングでき、背景に色や画像を敷けます。
+</p>
+
+<div class="next">
+  <span class="label">次に読む</span>
+  <ul>
+    <li><a href="use-preset.html">プリセットを使う</a> <span class="why">— キャラを読み込んで置く</span></li>
+    <li><a href="own-images.html">自分の絵で作る</a> <span class="why">— 詳細設定の7タブを順に</span></li>
+  </ul>
+</div>
+
+</main>
+
+<footer><div class="inner">まめきゃら — MAMEMONO</div></footer>
+
+</body>
+</html>

@@ -108,7 +108,7 @@ body {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   font-family: var(--display);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .topbar nav a {
@@ -130,7 +130,7 @@ body {
   .topbar nav {
     flex-basis: 100%;
     grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.1rem;
     font-size: 0.8125rem;
   }
