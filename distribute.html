@@ -17,13 +17,7 @@
   <div class="topbar-inner">
     <a class="brand" href="index.html">まめ<span>きゃら</span></a>
     <nav>
-      <a href="index.html">はじめに</a>
-      <a href="install.html">インストール</a>
-      <a href="window.html">ウィンドウのつくり</a>
-      <a href="use-preset.html">プリセットを使う</a>
-      <a href="own-images.html">自分の絵で作る</a>
-      <a href="distribute.html" aria-current="page">クリエイター向け</a>
-      <a href="qa.html">Q&amp;A</a>
+      <a href="index.html">はじめに</a><a href="install.html">インストール</a><a href="window.html">ウィンドウのつくり</a><a href="use-preset.html">プリセットを使う</a><a href="own-images.html">自分の絵で作る</a><a href="distribute.html" aria-current="page">クリエイター向け</a> <a href="qa.html">Q&amp;A</a>
     </nav>
   </div>
 </div>
@@ -33,9 +27,7 @@
 <h1>プリセットを配る</h1>
 
 <p class="lede">
-組み立てたキャラは<code>.mamechara</code>という<strong>1ファイル</strong>に書き出せます。
-画像も中に入るので、受け取った人はファイルを1つ読み込むだけで同じキャラになります。
-配布・販売・友人に渡す、どれも同じ手順です。
+組み立てたキャラは<code>.mamechara</code>という<strong>1ファイル</strong>に書き出せます。画像も中に入るので、受け取った人はファイルを1つ読み込むだけで同じキャラになります。配布・販売・友人に渡す、どれも同じ手順です。
 </p>
 
 <h2>書き出す</h2>
@@ -43,22 +35,18 @@
 <div class="split">
   <div class="prose">
     <p>
-      <strong>詳細設定</strong>の<strong>キャラ</strong>タブを下までスクロールすると
-      <strong>プリセットとして保存</strong>があります。開くと2つの操作があります。
+      <strong>詳細設定</strong>の<strong>キャラ</strong>タブを下までスクロールすると<strong>プリセットとして保存</strong>があります。開くと2つの操作があります。
     </p>
     <dl class="terms">
       <dt>保存</dt>
       <dd>
-        名前を付けて<strong>このプロジェクトの中に</strong>保存します。自分用の呼び出し先です。
-        <code>ProjectSettings/MameChara/</code>に入るので、プロジェクトの外には出ません。
+        名前を付けて<strong>このプロジェクトの中に</strong>保存します。自分用の呼び出し先です。<code>ProjectSettings/MameChara/</code>に入るので、プロジェクトの外には出ません。
       </dd>
-      <dt>エクスポート...</dt><dd><strong><code>.mamechara</code>ファイルに書き出します。</strong>配布するのはこちら。
-        画像がファイルの中に入るので、渡す相手に画像を別送する必要はありません。
+      <dt>エクスポート...</dt><dd><strong><code>.mamechara</code>ファイルに書き出します。</strong>配布するのはこちら。画像がファイルの中に入るので、渡す相手に画像を別送する必要はありません。
       </dd>
     </dl>
     <p>
-      書き出されるのは<strong>選んでいるスロットの設定一式</strong>——画像・配置・アニメ・吹き出し・
-      遮断範囲・ミニシェルフ位置です。
+      書き出されるのは<strong>選んでいるスロットの設定一式</strong>——画像・配置・アニメ・吹き出し・遮断範囲・ミニシェルフ位置です。
     </p>
   </div>
   <figure>
@@ -90,54 +78,40 @@
 <div class="note">
   <span class="label">なぜ選べるのか</span>
   <p>
-    プリセットの適用は<strong>含まれている部分だけを上書きします</strong>。
-    だから「キャラだけを配る」プリセットは、受け取った人が自分で用意した吹き出しや背景を壊しません。
+    プリセットの適用は<strong>含まれている部分だけを上書きします</strong>。だから「キャラだけを配る」プリセットは、受け取った人が自分で用意した吹き出しや背景を壊しません。
   </p>
   <p>
-    逆に、世界観をまるごと届けたいなら両方入れてください。
-    <strong>キャラだけのプリセットと、全部入りのプリセット、どちらも同じ<code>.mamechara</code>です。</strong>
-    受け取った側が中身を意識する必要はありません。
+    逆に、世界観をまるごと届けたいなら両方入れてください。<strong>キャラだけのプリセットと、全部入りのプリセット、どちらも同じ<code>.mamechara</code>です。</strong>受け取った側が中身を意識する必要はありません。
   </p>
 </div>
 
 <h2>同梱の画像を使うとファイルが小さくなる</h2>
 
 <p>
-  吹き出しに<strong>同梱の画像から選ぶ...</strong>で選んだ既定の吹き出しを使っている場合、
-  書き出したファイルには<strong>画像そのものは入らず、参照だけが記録されます</strong>。
-  MameChara を持っている人なら同じ画像が手元にあるので、持ち運ぶ必要がないからです。
+  吹き出しに<strong>同梱の画像から選ぶ...</strong>で選んだ既定の吹き出しを使っている場合、書き出したファイルには<strong>画像そのものは入らず、参照だけが記録されます</strong>。 MameChara を持っている人なら同じ画像が手元にあるので、持ち運ぶ必要がないからです。
 </p>
 
 <p>
-  そのぶんファイルはとても小さくなります。自前の吹き出しを描いた場合は、
-  ふつうに画像が中に入ります。
+  そのぶんファイルはとても小さくなります。自前の吹き出しを描いた場合は、ふつうに画像が中に入ります。
 </p>
 
 <h2>配る前に確かめること</h2>
 
 <ul>
   <li>
-    <strong>別のスロットに読み込んで開き直す。</strong>書き出したファイルを空きスロットに適用して、
-    意図した見た目になるか確かめてください。ここで初めて「含めるのを忘れていた」に気づけます。
+    <strong>別のスロットに読み込んで開き直す。</strong>書き出したファイルを空きスロットに適用して、意図した見た目になるか確かめてください。ここで初めて「含めるのを忘れていた」に気づけます。
   </li>
   <li>
-    <strong>吹き出しを含めないなら、セリフも届きません。</strong>
-    セリフはキャラではなく吹き出し側の情報です。言わせたいことがあるなら吹き出しを含めてください。
+    <strong>吹き出しを含めないなら、セリフも届きません。</strong>セリフはキャラではなく吹き出し側の情報です。言わせたいことがあるなら吹き出しを含めてください。
   </li>
   <li>
-    <strong>スケールは相手の環境で変わります。</strong>
-    立ち位置と大きさは受け取った人が調整する前提で作ってください
-    （<a href="use-preset.html">プリセットを使う</a>でもそう案内しています）。
+    <strong>スケールは相手の環境で変わります。</strong>立ち位置と大きさは受け取った人が調整する前提で作ってください（<a href="use-preset.html">プリセットを使う</a>でもそう案内しています）。
   </li>
   <li>
-    <strong>ウィンドウ上でドラッグした位置は入りません。</strong>
-    書き出されるのは<strong>初期位置</strong>だけです。ウィンドウごとの上書きは相手の環境の話なので、
-    プリセットには含まれません。
+    <strong>ウィンドウ上でドラッグした位置は入りません。</strong>書き出されるのは<strong>初期位置</strong>だけです。ウィンドウごとの上書きは相手の環境の話なので、プリセットには含まれません。
   </li>
   <li>
-    <strong>日本語と英語の両方で見ておく。</strong>
-    UI は<strong>全体</strong>タブで切り替えられます。セリフは自分で書いたものがそのまま出るので、
-    どちらの言語で使われるかを想定して書いてください。
+    <strong>日本語と英語の両方で見ておく。</strong> UI は<strong>全体</strong>タブで切り替えられます。セリフは自分で書いたものがそのまま出るので、どちらの言語で使われるかを想定して書いてください。
   </li>
 </ul>
 
@@ -149,25 +123,21 @@
 
 <table class="full">
   <tr><td><code>.mamechara</code></td><td>
-    プリセット1つ分。中身は ZIP で、<code>preset.json</code>と<code>images/</code>が入っています。
-    現在の形式は<code>formatVersion 4</code>。
+    プリセット1つ分。中身は ZIP で、<code>preset.json</code>と<code>images/</code>が入っています。現在の形式は<code>formatVersion 4</code>。
   </td></tr>
   <tr><td><code>.mamecharaset</code></td><td>
-    自分の環境をまるごと持ち出すためのファイル。4スロット分の設定と画像、表示先、全体オプションが入ります。
-    <strong>配布用ではありません</strong>——読み込むと相手の設定を全部置き換えてしまいます。
+    自分の環境をまるごと持ち出すためのファイル。4スロット分の設定と画像、表示先、全体オプションが入ります。<strong>配布用ではありません</strong>——読み込むと相手の設定を全部置き換えてしまいます。
   </td></tr>
 </table>
 
 <p>
-  <code>formatVersion 3</code>以前の古い<code>.mamechara</code>は<strong>「全部入り」として読まれます</strong>。
-  含める・含めないという考え方が無かった頃のファイルは、実際に全部持っていたからです。
+  <code>formatVersion 3</code>以前の古い<code>.mamechara</code>は<strong>「全部入り」として読まれます</strong>。含める・含めないという考え方が無かった頃のファイルは、実際に全部持っていたからです。
 </p>
 
 <div class="callout">
   <span class="label">配る相手に伝えること</span>
   <p>
-    受け取る人がすることは<strong>設定を開いて「プリセットを適用...」でファイルを選ぶだけ</strong>です。
-    <a href="use-preset.html">プリセットを使う</a>のページをそのまま案内してもらえます。
+    受け取る人がすることは<strong>設定を開いて「プリセットを適用...」でファイルを選ぶだけ</strong>です。<a href="use-preset.html">プリセットを使う</a>のページをそのまま案内してもらえます。
   </p>
 </div>
 

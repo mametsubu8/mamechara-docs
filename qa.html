@@ -17,13 +17,7 @@
   <div class="topbar-inner">
     <a class="brand" href="index.html">まめ<span>きゃら</span></a>
     <nav>
-      <a href="index.html">はじめに</a>
-      <a href="install.html">インストール</a>
-      <a href="window.html">ウィンドウのつくり</a>
-      <a href="use-preset.html">プリセットを使う</a>
-      <a href="own-images.html">自分の絵で作る</a>
-      <a href="distribute.html">クリエイター向け</a>
-      <a href="qa.html" aria-current="page">Q&amp;A</a>
+      <a href="index.html">はじめに</a><a href="install.html">インストール</a><a href="window.html">ウィンドウのつくり</a><a href="use-preset.html">プリセットを使う</a><a href="own-images.html">自分の絵で作る</a><a href="distribute.html">クリエイター向け</a> <a href="qa.html" aria-current="page">Q&amp;A</a>
     </nav>
   </div>
 </div>
@@ -33,8 +27,7 @@
 <h1>Q&amp;A</h1>
 
 <p class="lede">
-気になるところを開いてください。多いのは<strong>位置のスライダーが効かない</strong>（ドラッグの上書きが残っている）と、
-<strong>クリックが下のUIに通る／通らない</strong>（クリック遮断範囲）の2つです。
+気になるところを開いてください。多いのは<strong>位置のスライダーが効かない</strong>（ドラッグの上書きが残っている）と、<strong>クリックが下のUIに通る／通らない</strong>（クリック遮断範囲）の2つです。
 </p>
 
 <div class="faq">
@@ -44,9 +37,7 @@
 <summary>位置のスライダーを動かしてもキャラが動かない</summary>
 <div class="body">
   <p>
-    そのウィンドウで<strong>キャラをドラッグして動かした位置が残っている</strong>からです。
-    配置のスライダーは<strong>初期位置</strong>——まだ動かしていないウィンドウの位置——を決めるもので、
-    一度ドラッグしたウィンドウはそのウィンドウ専用の位置が優先されます。
+    そのウィンドウで<strong>キャラをドラッグして動かした位置が残っている</strong>からです。配置のスライダーは<strong>初期位置</strong>——まだ動かしていないウィンドウの位置——を決めるもので、一度ドラッグしたウィンドウはそのウィンドウ専用の位置が優先されます。
   </p>
   <p>戻し方は3つあります。</p>
   <ul>
@@ -55,8 +46,7 @@
     <li><strong>全体</strong>タブの表示先一覧で、行の<strong>↺</strong>を押す（そのウィンドウの分だけ）</li>
   </ul>
   <p>
-    この仕組みはわざとこうなっています。同じキャラを「Scene では左上、Hierarchy では下端から
-    はみ出させる」と使い分けられるようにするためです。
+    この仕組みはわざとこうなっています。同じキャラを「Scene では左上、Hierarchy では下端からはみ出させる」と使い分けられるようにするためです。
   </p>
 </div>
 </details>
@@ -65,8 +55,7 @@
 <summary>キャラが端で切れる／全部見えない</summary>
 <div class="body">
   <p>
-    仕様です。位置は 0〜1 がウィンドウの内側で、<strong>範囲の外にも置けます</strong>。
-    端から半分だけのぞかせる置き方ができるようになっています。
+    仕様です。位置は 0〜1 がウィンドウの内側で、<strong>範囲の外にも置けます</strong>。端から半分だけのぞかせる置き方ができるようになっています。
   </p>
   <p>
     全部見せたいなら位置を内側に戻すか、スケールを小さくしてください。
@@ -109,20 +98,16 @@
 <div class="body">
   <ul>
     <li>
-      <strong>クリックで吹き出しを開いているあいだは出ません。</strong>
-      これは意図した動きです——ミニシェルフを触っているときに独り言で上書きされないようにしています。
-      一度クリックして閉じてください。
+      <strong>クリックで吹き出しを開いているあいだは出ません。</strong>これは意図した動きです——ミニシェルフを触っているときに独り言で上書きされないようにしています。一度クリックして閉じてください。
     </li>
     <li><strong>出す間隔</strong>が 0 になっていないか（0 で黙ります）</li>
     <li>独り言のセリフ欄が空になっていないか</li>
     <li>
-      イベント（コンパイル完了・Play開始・シーン保存）は、
-      それぞれの<strong>チェックが入っていて、かつそのセリフが書かれている</strong>必要があります
+      イベント（コンパイル完了・Play開始・シーン保存）は、それぞれの<strong>チェックが入っていて、かつそのセリフが書かれている</strong>必要があります
     </li>
   </ul>
   <p>
-    セリフが重なったときの優先度は<strong>クリック→イベント→独り言</strong>です。
-    クリックは割り込み、出ていた自動表示は打ち切られます。
+    セリフが重なったときの優先度は<strong>クリック→イベント→独り言</strong>です。クリックは割り込み、出ていた自動表示は打ち切られます。
   </p>
 </div>
 </details>
@@ -132,9 +117,7 @@
 <summary>キャラを押したのに下の Hierarchy や Project が反応する</summary>
 <div class="body">
   <p>
-    <strong>クリック遮断範囲</strong>がキャラより小さいか、位置がずれています。
-    <strong>クリック</strong>タブで<strong>範囲を赤枠で表示する</strong>を入れると、
-    どこで受け止めているかが見えます。
+    <strong>クリック遮断範囲</strong>がキャラより小さいか、位置がずれています。<strong>クリック</strong>タブで<strong>範囲を赤枠で表示する</strong>を入れると、どこで受け止めているかが見えます。
   </p>
   <p>キャラの見た目より少し大きいくらいが目安です。</p>
 </div>
@@ -144,8 +127,7 @@
 <summary>キャラの近くのボタンが押せなくなった</summary>
 <div class="body">
   <p>
-    逆に<strong>クリック遮断範囲が広すぎます</strong>。赤枠を出して、本来のUIに
-    かぶっていないところまで狭めてください。
+    逆に<strong>クリック遮断範囲が広すぎます</strong>。赤枠を出して、本来のUIにかぶっていないところまで狭めてください。
   </p>
   <p>
     キャラを端に寄せてから範囲を決めると、ぶつかりにくくなります。
@@ -157,9 +139,7 @@
 <summary>赤い枠が消えない</summary>
 <div class="body">
   <p>
-    赤枠は<strong>設定ウィンドウを開いているあいだだけ</strong>表示されます。
-    設定を閉じれば消えます。開いたまま消したい場合は
-    <strong>クリック</strong>タブの<strong>範囲を赤枠で表示する</strong>を切ってください。
+    赤枠は<strong>設定ウィンドウを開いているあいだだけ</strong>表示されます。設定を閉じれば消えます。開いたまま消したい場合は<strong>クリック</strong>タブの<strong>範囲を赤枠で表示する</strong>を切ってください。
   </p>
 </div>
 </details>
@@ -172,9 +152,7 @@
     <strong>Unity の現在の仕様上、ウィンドウ自体は透明にできません。</strong>
   </p>
   <p>
-    透過でウィンドウに置きたいときは<strong>どのウィンドウに出す</strong>を使ってください。
-    Scene / Hierarchy / Inspector / Project / Console / Game の上に
-    <strong>キャラだけを直接描く</strong>方法で、背景は一切塗りません。
+    透過でウィンドウに置きたいときは<strong>どのウィンドウに出す</strong>を使ってください。 Scene / Hierarchy / Inspector / Project / Console / Game の上に<strong>キャラだけを直接描く</strong>方法で、背景は一切塗りません。
   </p>
 </div>
 </details>
@@ -186,8 +164,7 @@
     <li><strong>2枚目（アニメ）</strong>の画像が設定されているか。1枚だけだと止まったままです</li>
     <li><strong>クリック差分</strong>を表示中はアニメが止まります（仕様）</li>
     <li>
-      他のアプリを使っているあいだ動かないのは <strong>Unity が非アクティブのときアニメを止める</strong>
-      が入っているためです。見えないところで動かさないぶん軽くなります
+      他のアプリを使っているあいだ動かないのは <strong>Unity が非アクティブのときアニメを止める</strong>が入っているためです。見えないところで動かさないぶん軽くなります
     </li>
   </ul>
 </div>
@@ -197,17 +174,14 @@
 <summary>プリセットを適用したら吹き出しや背景が変わった／変わらなかった</summary>
 <div class="body">
   <p>
-    プリセットには<strong>「何を含むか」</strong>が記録されていて、
-    <strong>含まれている部分だけが上書きされます</strong>。
+    プリセットには<strong>「何を含むか」</strong>が記録されていて、<strong>含まれている部分だけが上書きされます</strong>。
   </p>
   <ul>
     <li>吹き出しが変わらなかった→そのプリセットは吹き出しを含んでいません</li>
     <li>自分の背景が消えた→そのプリセットは背景を含んでいます</li>
   </ul>
   <p>
-    自分で書き出すときは、<strong>キャラ</strong>タブの<strong>プリセットとして保存</strong>で
-    <strong>吹き出しを含める</strong>／<strong>背景を含める</strong>を選べます。
-    詳しくは<a href="distribute.html">プリセットを配る</a>へ。
+    自分で書き出すときは、<strong>キャラ</strong>タブの<strong>プリセットとして保存</strong>で<strong>吹き出しを含める</strong>／<strong>背景を含める</strong>を選べます。詳しくは<a href="distribute.html">プリセットを配る</a>へ。
   </p>
 </div>
 </details>
@@ -217,10 +191,7 @@
 <summary>更新したら設定が消える？</summary>
 <div class="body">
   <p>
-    消えません。設定・画像・プリセットは<code>Assets/</code>ではなく
-    <code>ProjectSettings/MameChara/</code>に保存されていて、
-    <code>.unitypackage</code>のインポータはここに触りません。
-    新しい<code>.unitypackage</code>を上からインポートしてください。
+    消えません。設定・画像・プリセットは<code>Assets/</code>ではなく<code>ProjectSettings/MameChara/</code>に保存されていて、<code>.unitypackage</code>のインポータはここに触りません。新しい<code>.unitypackage</code>を上からインポートしてください。
   </p>
 </div>
 </details>
@@ -229,14 +200,10 @@
 <summary>別のプロジェクトや別のマシンに移したい</summary>
 <div class="body">
   <p>
-    <strong>全体</strong>タブの<strong>設定の持ち出し</strong>で
-    <strong>すべて書き出す...</strong>を押すと、4スロット分の設定・画像・表示先・全体オプションが
-    <code>.mamecharaset</code> 1ファイルになります。移した先で
-    <strong>読み込んで置き換える...</strong>。
+    <strong>全体</strong>タブの<strong>設定の持ち出し</strong>で<strong>すべて書き出す...</strong>を押すと、4スロット分の設定・画像・表示先・全体オプションが <code>.mamecharaset</code> 1ファイルになります。移した先で<strong>読み込んで置き換える...</strong>。
   </p>
   <p>
-    <strong>読み込むと、その環境の設定は全部置き換わります。</strong>
-    キャラ1体だけを渡したいときは<code>.mamechara</code>（プリセット）の方を使ってください。
+    <strong>読み込むと、その環境の設定は全部置き換わります。</strong>キャラ1体だけを渡したいときは<code>.mamechara</code>（プリセット）の方を使ってください。
   </p>
 </div>
 </details>
