@@ -14,13 +14,16 @@
 | `use-preset.html` | 配られたプリセットを使う（使う人向け） |
 | `own-images.html` | 自分のイラストから組み立てる（作る人向け） |
 | `distribute.html` | `.mamechara` を書き出して配る（配る人向け） |
-| `reference.html` | 設定項目の一覧 |
-| `troubleshooting.html` | 症状別の対処 |
+| `qa.html` | Q&A。仕分けの見出しを置かず、質問をずらっと並べる |
 | `assets/style.css` | 全ページ共通のスタイル。配色トークンで light / dark 両対応 |
 | `images/` | 設定ウィンドウのスクリーンショット |
 
 ヘッダーとフッターは各ページに直接書いています。ナビゲーションを変えるときは
 全ページの `<nav>` を揃えてください（現在のページには `aria-current="page"` を付ける）。
+項目は等幅で並ぶので、増やすと1つあたりが狭くなります。
+
+見出しとキャッチフレーズは丸ゴシック（Zen Maru Gothic / Google Fonts）。
+**明朝のような固い書体は使いません。**
 
 ## スクリーンショット
 
