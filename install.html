@@ -33,9 +33,39 @@
 <h1>インストール</h1>
 
 <p class="lede">
-手に入れた <code>.unitypackage</code> をインポートするだけです。
-設定と画像は <code>Assets</code> の外に保存されるので、更新しても消えません。
+インポートするのは<strong>本体の <code>.unitypackage</code> だけ</strong>です。キャラプリセットの
+<code>.mamechara</code> はツールの中から読み込むので、プロジェクトに入れる必要はありません。
 </p>
+
+<h2>2つのファイルの役割</h2>
+
+<table class="full">
+  <tr>
+    <td>本体<br><code>.unitypackage</code></td>
+    <td>
+      まめきゃら本体。<strong>これをプロジェクトにインポートします。</strong>
+      1つのプロジェクトに1回だけ
+    </td>
+  </tr>
+  <tr>
+    <td>キャラプリセット<br><code>.mamechara</code></td>
+    <td>
+      キャラ1体分のデータ。<strong>インポートしません。</strong>
+      好きな場所（デスクトップやダウンロードフォルダなど）に置いたまま、
+      設定ウィンドウの<strong>プリセットを適用...</strong>から選んで読み込みます
+    </td>
+  </tr>
+</table>
+
+<div class="callout">
+  <span class="label">.mamechara はインポートしないでください</span>
+  <p>
+    Unity のプロジェクトに入れる必要はありません。ツールが直接ファイルを読むので、
+    <code>Assets</code> の中に置いても意味がなく、プロジェクトが散らかるだけです。
+  </p>
+</div>
+
+<h2>本体を入れる</h2>
 
 <p>
   <code>MameChara-x.y.z.unitypackage</code> をダブルクリックするか、開いているプロジェクトに

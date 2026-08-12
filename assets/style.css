@@ -23,7 +23,8 @@
   --shot-mat:   oklch(91.5% 0.022 76);
 
   --text-base:  1.0625rem;
-  --measure:    41rem;
+  --measure:    46rem;
+  --shot:       35rem;   /* スクリーンショットの原寸 560px */
   --radius:     10px;
 
   /* 見出しとキャッチは丸ゴシック。明朝のような固い書体は使わない */
@@ -67,6 +68,12 @@ body {
   font-size: var(--text-base);
   line-height: 1.85;
   letter-spacing: 0.01em;
+
+  /* 日本語を文節で折り返す。「〜できま」で切れて次行が「す。」になるのを防ぐ。
+     未対応のブラウザでは通常の折り返しに戻るだけ */
+  word-break: auto-phrase;
+  line-break: strict;
+  text-wrap: pretty;
 }
 
 /* ── 上部ナビ ── */
@@ -81,7 +88,7 @@ body {
 }
 
 .topbar-inner {
-  max-width: 68rem;
+  max-width: 84rem;
   margin: 0 auto;
   padding: 0.35rem 1.5rem;
   display: flex;
@@ -139,7 +146,7 @@ body {
 /* ── 本文 ── */
 
 main {
-  max-width: 68rem;
+  max-width: 84rem;
   margin: 0 auto;
   padding: 3.5rem 1.5rem 6rem;
 }
@@ -148,6 +155,7 @@ main {
 
 h1 {
   font-family: var(--display);
+  text-wrap: balance;
   font-size: clamp(1.7rem, 1.2rem + 1.9vw, 2.5rem);
   line-height: 1.3;
   letter-spacing: 0.01em;
@@ -167,6 +175,7 @@ h1 {
 
 h2 {
   font-family: var(--display);
+  text-wrap: balance;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -178,6 +187,7 @@ h2 {
 
 h3 {
   font-family: var(--display);
+  text-wrap: balance;
   font-size: 1.125rem;
   font-weight: 700;
   margin: 2.75rem 0 0.3rem;
@@ -228,7 +238,7 @@ strong { font-weight: 700; }
 
 figure {
   margin: 1.6rem 0 2.2rem;
-  max-width: 34rem;
+  max-width: var(--shot);
 }
 
 figure.wide { max-width: var(--measure); }
@@ -271,19 +281,19 @@ figcaption {
    短い側を中央に置くと見出しが図の中ほどまで下がってしまうので、上端で揃える */
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
-  gap: 2.5rem;
+  grid-template-columns: minmax(24rem, 1fr) minmax(0, var(--shot));
+  gap: 3rem;
   align-items: start;
-  max-width: 68rem;
+  max-width: 84rem;
 }
 
 .split > figure { margin: 0.4rem 0 0; max-width: none; }
 .split .prose { max-width: none; }
 .split .prose p, .split .prose ul, .split .prose ol, .split .prose table { max-width: none; }
 
-@media (max-width: 56rem) {
+@media (max-width: 68rem) {
   .split { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
-  .split > figure { max-width: 34rem; }
+  .split > figure { max-width: var(--shot); }
 }
 
 /* ── 注記 ── */
@@ -323,8 +333,8 @@ figcaption {
 .paths {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
-  gap: 1rem;
-  max-width: 66rem;
+  gap: 1.25rem;
+  max-width: 84rem;
   margin: 1.75rem 0 1rem;
 }
 
@@ -399,7 +409,7 @@ td:first-child { white-space: nowrap; padding-right: 1.4rem; font-weight: 600; }
 
 /* ── 手順 ── */
 
-.steps { counter-reset: step; list-style: none; padding-left: 0; max-width: 66rem; }
+.steps { counter-reset: step; list-style: none; padding-left: 0; max-width: 84rem; }
 
 .steps > li {
   counter-increment: step;
@@ -443,7 +453,7 @@ dl.terms dd { margin: 0.2rem 0 0; color: var(--ink-soft); }
   margin-top: 5.5rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--line);
-  max-width: 66rem;
+  max-width: 84rem;
 }
 
 .next .label {
@@ -466,7 +476,7 @@ footer {
   font-size: 0.85rem;
 }
 
-footer .inner { max-width: 68rem; margin: 0 auto; }
+footer .inner { max-width: 84rem; margin: 0 auto; }
 
 /* ── 目次（リファレンス用） ── */
 
