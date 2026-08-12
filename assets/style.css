@@ -218,6 +218,22 @@ figure img {
   background: var(--shot-mat);
 }
 
+/* 画像は原寸 560px。縮めると Unity の文字が読めないので、
+   クリックで原寸を開けるようにしている */
+figure a {
+  display: block;
+  border-radius: var(--radius);
+  cursor: zoom-in;
+}
+
+figure a img { transition: border-color 160ms ease, box-shadow 160ms ease; }
+
+figure a:hover img,
+figure a:focus-visible img {
+  border-color: var(--accent);
+  box-shadow: 0 2px 18px -6px color-mix(in oklab, var(--accent) 55%, transparent);
+}
+
 figcaption {
   margin-top: 0.6rem;
   font-size: 0.85rem;
@@ -227,16 +243,17 @@ figcaption {
   border-left: 2px solid var(--line);
 }
 
-/* 画像と文章を並べる。狭い画面では縦に落ちる */
+/* 画像と文章を並べる。狭い画面では縦に落ちる。
+   文章より画像がずっと背が高くなるので、短い側は中央に置く */
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 21rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
   gap: 2.5rem;
-  align-items: start;
-  max-width: 66rem;
+  align-items: center;
+  max-width: 68rem;
 }
 
-.split > figure { margin-top: 0.4rem; max-width: none; }
+.split > figure { margin: 0.4rem 0 0; max-width: none; }
 .split .prose { max-width: none; }
 .split .prose p, .split .prose ul, .split .prose ol, .split .prose table { max-width: none; }
 
