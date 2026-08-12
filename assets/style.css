@@ -7,10 +7,10 @@
   --ink:        oklch(27% 0.030 55);
   --ink-soft:   oklch(47% 0.032 58);
   --ink-faint:  oklch(63% 0.028 62);
-  --paper:      oklch(98% 0.008 78);
-  --paper-2:    oklch(95.5% 0.018 76);
-  --line:       oklch(88% 0.020 72);
-  --line-soft:  oklch(92.5% 0.015 74);
+  --paper:      oklch(96.8% 0.016 80);
+  --paper-2:    oklch(94% 0.026 78);
+  --line:       oklch(87% 0.026 74);
+  --line-soft:  oklch(91.5% 0.020 76);
 
   --accent:     oklch(53% 0.130 52);
   --accent-2:   oklch(64% 0.145 58);
@@ -20,7 +20,7 @@
   --warn:       oklch(49% 0.150 33);
   --warn-wash:  oklch(96% 0.038 40);
 
-  --shot-mat:   oklch(93% 0.016 74);
+  --shot-mat:   oklch(91.5% 0.022 76);
 
   --text-base:  1.0625rem;
   --measure:    41rem;
