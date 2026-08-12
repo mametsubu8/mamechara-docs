@@ -442,7 +442,11 @@ td:first-child { white-space: nowrap; padding-right: 1.4rem; font-weight: 600; }
   line-height: 1;
 }
 
-.steps > li > h3:first-child { margin-top: 0.1rem; }
+/* 番号の丸と見出しの高さを合わせる。図がある項目は見出しが
+   .split > .prose の中に入るので、そちらにも同じ指定が必要 */
+.steps > li > h3:first-child,
+.steps > li > .split > .prose > h3:first-child,
+.steps > li > .split > .prose > h2:first-child { margin-top: 0.1rem; }
 
 /* 手順の中では見出しを番号の高さに合わせる。中央寄せにすると番号だけが
    ぽつんと上に残って、どの見出しの番号なのか分からなくなる */
