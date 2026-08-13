@@ -169,10 +169,18 @@ body {
     order: 2;
     flex-basis: 100%;
     grid-auto-flow: row;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.1rem;
     font-size: 0.8125rem;
   }
+  /* 狭いところでは「ウィンドウのつくり」が1行に収まらないので折り返させる。
+     nowrap のままだと枠から溢れる */
+  .topbar nav a { white-space: normal; line-height: 1.5; }
+}
+
+@media (max-width: 30rem) {
+  .topbar nav { grid-template-columns: repeat(2, 1fr); font-size: 0.78rem; }
+  .buy { font-size: 0.78rem; padding: 0.35rem 0.8rem 0.37rem; }
 }
 
 /* ── 本文 ── */
